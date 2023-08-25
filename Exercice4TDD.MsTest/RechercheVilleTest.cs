@@ -28,5 +28,16 @@ namespace Exercice4TDD.MsTest
         {
             Assert.ThrowsException<NotFoundException>(() => _rechercheVille.Rechercher("a")) ;
         }
+
+        // 2 - Si le texte de recherche est égal ou supérieur à 2 caractères, il doit renvoyer tous les noms de ville commençant
+        //          par le texte de recherche exact.
+        //     Par exemple, pour le texte de recherche "Va", la fonction doit renvoyer Valence et Vancouver
+        [TestMethod]
+        public void WhenRechercheVille_Va_Then_ListVillesVa()
+        {
+            List<String> listVilles = _rechercheVille.Rechercher("Va");
+            List<String> listToCompare = new() {"Valence","Vancouver"};
+            CollectionAssert.IsSubsetOf(listToCompare, listVilles); 
+        }
     }
 }
