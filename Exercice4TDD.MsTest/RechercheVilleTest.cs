@@ -64,7 +64,8 @@ namespace Exercice4TDD.MsTest
         public void WhenRechercheVille_asterisk_Then_ListVilles()
         {
             List<String> listVilles = _rechercheVille.Rechercher("*");
-            Assert.AreEqual(17, listVilles.Count);
+            List<String> listToCompare = _rechercheVille.LireListVilles();
+            Assert.AreSame(listToCompare, listVilles);
         }
 
     }

@@ -28,9 +28,17 @@ namespace Exercice4TDD
             "Dubaï", 
             "Rome", 
             "Istanbul", 
-            "Bruxelles"
+            "Bruxelles", 
+            "Lille",
+            "Douai"
         };
 
+        // Lecture de la liste
+        public List<String> LireListVilles()
+        { 
+            return villes;  
+        }
+        // Recherche villes
         public List<String> Rechercher(String mot)
         {
             List<String> listTmp = new();
