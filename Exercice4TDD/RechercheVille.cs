@@ -36,8 +36,12 @@ namespace Exercice4TDD
             {
                 throw new NotFoundException();
             }
-            
-            throw new NotImplementedException();
+            List<String> listTmp = new();
+            foreach (String s in villes) 
+            { 
+                if (s.Contains(mot)) listTmp.Add(s);    
+            }
+            return listTmp;    
         }
     }
 }
