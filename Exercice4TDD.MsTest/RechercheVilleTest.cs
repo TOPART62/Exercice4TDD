@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Exercice4TDD;
 
 namespace Exercice4TDD.MsTest
 {
     [TestClass]
-    internal class RechercheVilleTest
+    public class RechercheVilleTest
     {
         private RechercheVille? _rechercheVille;
 

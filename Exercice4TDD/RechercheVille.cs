@@ -10,7 +10,7 @@ namespace Exercice4TDD
     // Exemple de villes : Paris, Budapest, Skopje, Rotterdam, Valence, Vancouver, Amsterdam, Vienne, Sydney, New York, Londres, Bangkok, Hong Kong, Dubaï, Rome, Istanbul
     public class RechercheVille
     {
-        private List<String> villes = new()
+        private readonly List<String> villes = new()
         { 
             "Paris", 
             "Budapest", 
