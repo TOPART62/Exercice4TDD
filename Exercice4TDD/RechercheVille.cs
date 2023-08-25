@@ -32,6 +32,11 @@ namespace Exercice4TDD
 
         public List<String> Rechercher(String mot)
         {
+            if ((mot == null) || (mot.Length < 2))
+            {
+                throw new NotFoundException();
+            }
+            
             throw new NotImplementedException();
         }
     }
