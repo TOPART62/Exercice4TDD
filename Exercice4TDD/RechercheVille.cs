@@ -38,9 +38,7 @@ namespace Exercice4TDD
             }
             List<String> listTmp = new();
             foreach (String s in villes) 
-            { 
                 if (s.Contains(mot)) listTmp.Add(s);    
-            }
             return listTmp;    
         }
     }

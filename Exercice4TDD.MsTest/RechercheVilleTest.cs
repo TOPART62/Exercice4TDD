@@ -39,5 +39,15 @@ namespace Exercice4TDD.MsTest
             List<String> listToCompare = new() {"Valence","Vancouver"};
             CollectionAssert.IsSubsetOf(listToCompare, listVilles); 
         }
+
+        //3 - La fonctionnalité de recherche doit être insensible à la casse
+        [TestMethod]
+        public void WhenRechercheVille_Va_Then_ListVillesVa()
+        {
+            List<String> listVilles = _rechercheVille.Rechercher("VA");
+            List<String> listToCompare = new() { "Valence", "Vancouver" };
+            CollectionAssert.IsSubsetOf(listToCompare, listVilles);
+        }
+
     }
 }
