@@ -49,5 +49,15 @@ namespace Exercice4TDD.MsTest
             CollectionAssert.IsSubsetOf(listToCompare, listVilles);
         }
 
+        //4 - La fonctionnalité de recherche devrait également fonctionner lorsque le texte de recherche n'est qu'une partie
+        //      d'un nom de ville Par exemple "ape" devrait renvoyer la ville "Budapest"
+        [TestMethod]
+        public void WhenRechercheVille_Va_Then_ListVillesVA()
+        {
+            List<String> listVilles = _rechercheVille.Rechercher("ape");
+            List<String> listToCompare = new() { "Budapest" };
+            CollectionAssert.IsSubsetOf(listToCompare, listVilles);
+        }
     }
 }
+
