@@ -6,9 +6,29 @@ using System.Threading.Tasks;
 
 namespace Exercice4TDD
 {
-    internal class RechercheVille
+    // La fonction prend une chaîne (texte de recherche) en entrée et renvoie les villes trouvées qui correspondent au texte de recherche.
+    // Exemple de villes : Paris, Budapest, Skopje, Rotterdam, Valence, Vancouver, Amsterdam, Vienne, Sydney, New York, Londres, Bangkok, Hong Kong, Dubaï, Rome, Istanbul
+    public class RechercheVille
     {
-        private List<String> _villes;
+        private List<String> villes = new()
+        { 
+            "Paris", 
+            "Budapest", 
+            "Skopje", 
+            "Rotterdam", 
+            "Valence", 
+            "Vancouver", 
+            "Amsterdam", 
+            "Vienne", 
+            "Sydney", 
+            "New York", 
+            "Londres", 
+            "Bangkok", 
+            "Hong Kong", 
+            "Dubaï", 
+            "Rome", 
+            "Istanbul" 
+        };
 
         public List<String> Rechercher(String mot)
         {

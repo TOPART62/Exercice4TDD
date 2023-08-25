@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Exercice4TDD.MsTest
 {
+    [TestClass]
     internal class RechercheVilleTest
     {
+        
     }
 }
