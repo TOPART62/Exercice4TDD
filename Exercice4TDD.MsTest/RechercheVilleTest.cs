@@ -42,7 +42,7 @@ namespace Exercice4TDD.MsTest
 
         //3 - La fonctionnalité de recherche doit être insensible à la casse
         [TestMethod]
-        public void WhenRechercheVille_Va_Then_ListVillesVA()
+        public void WhenRechercheVille_VA_Then_ListVillesVA()
         {
             List<String> listVilles = _rechercheVille.Rechercher("VA");
             List<String> listToCompare = new() { "Valence", "Vancouver" };
@@ -52,12 +52,21 @@ namespace Exercice4TDD.MsTest
         //4 - La fonctionnalité de recherche devrait également fonctionner lorsque le texte de recherche n'est qu'une partie
         //      d'un nom de ville Par exemple "ape" devrait renvoyer la ville "Budapest"
         [TestMethod]
-        public void WhenRechercheVille_Va_Then_ListVillesApe()
+        public void WhenRechercheVille_Ape_Then_ListVillesApe()
         {
             List<String> listVilles = _rechercheVille.Rechercher("ape");
             List<String> listToCompare = new() { "Budapest" };
             CollectionAssert.IsSubsetOf(listToCompare, listVilles);
         }
+
+        //5 - Si le texte de recherche est un « * » (astérisque), il doit renvoyer tous les noms de ville
+        [TestMethod]
+        public void WhenRechercheVille_asterisk_Then_ListVilles()
+        {
+            List<String> listVilles = _rechercheVille.Rechercher("*");
+            Assert.AreEqual(17, listVilles.Count);
+        }
+
     }
 }
 
