@@ -27,6 +27,7 @@ namespace Exercice4TDD.MsTest
         [TestMethod]
         public void WhenRechercheVille_LessThan2Digits_Then_NotFoundException()
         {
+            Assert.ThrowsException<NotFoundException>(() => _rechercheVille.Rechercher("a")) ;
         }
     }
 }
