@@ -27,7 +27,8 @@ namespace Exercice4TDD
             "Hong Kong", 
             "Dubaï", 
             "Rome", 
-            "Istanbul" 
+            "Istanbul", 
+            "Bruxelles"
         };
 
         public List<String> Rechercher(String mot)

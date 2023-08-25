@@ -26,7 +26,7 @@ namespace Exercice4TDD.MsTest
         [TestMethod]
         public void WhenRechercheVille_LessThan2Digits_Then_NotFoundException()
         {
-            Assert.ThrowsException<NotFoundException>(() => _rechercheVille.Rechercher("a")) ;
+            Assert.ThrowsException<NotFoundException>(() => _rechercheVille.Rechercher("a"));
         }
 
         // 2 - Si le texte de recherche est égal ou supérieur à 2 caractères, il doit renvoyer tous les noms de ville commençant
@@ -52,7 +52,7 @@ namespace Exercice4TDD.MsTest
         //4 - La fonctionnalité de recherche devrait également fonctionner lorsque le texte de recherche n'est qu'une partie
         //      d'un nom de ville Par exemple "ape" devrait renvoyer la ville "Budapest"
         [TestMethod]
-        public void WhenRechercheVille_Va_Then_ListVillesVA()
+        public void WhenRechercheVille_Va_Then_ListVillesApe()
         {
             List<String> listVilles = _rechercheVille.Rechercher("ape");
             List<String> listToCompare = new() { "Budapest" };
