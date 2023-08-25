@@ -42,7 +42,7 @@ namespace Exercice4TDD.MsTest
 
         //3 - La fonctionnalité de recherche doit être insensible à la casse
         [TestMethod]
-        public void WhenRechercheVille_Va_Then_ListVillesVa()
+        public void WhenRechercheVille_Va_Then_ListVillesVA()
         {
             List<String> listVilles = _rechercheVille.Rechercher("VA");
             List<String> listToCompare = new() { "Valence", "Vancouver" };
