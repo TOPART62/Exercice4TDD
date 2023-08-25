@@ -33,10 +33,16 @@ namespace Exercice4TDD
 
         public List<String> Rechercher(String mot)
         {
-            if ((mot == null) || (mot.Length < 2))
+            List<String> listTmp = new();
+            if (mot == null)
                 throw new NotFoundException();
 
-            List<String> listTmp = new();
+            if (mot == "*")
+                return villes;
+
+            if (mot.Length < 2)
+                throw new NotFoundException(); 
+            
             foreach (String s in villes) 
                 if (s.ToUpper().Contains(mot.ToUpper())) listTmp.Add(s);    
             return listTmp;    
